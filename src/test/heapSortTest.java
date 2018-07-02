@@ -12,13 +12,13 @@ public class heapSortTest {
 	}
 	
 	public static void createMaxHeap(int[] array){//创建大根堆
-		for(int i=(array.length-2)/2;i>=0;i--){//从最后一个节点的父节点开始，从后往前调整
+		for(int i=(array.length-2)/2;i>=0;i--)//从最后一个节点的父节点开始，从后往前调整，自下到上(关键)调整成大根堆
 			adjustToMaxHeap(array,i,array.length);
-		}
+		
 		return;
 	}
 	
-	public static void adjustToMaxHeap(int[] array,int k,int length){//自下到上(关键)调整成大根堆
+	public static void adjustToMaxHeap(int[] array,int k,int length){//从位置k开始，向下调整根堆
 		int temp=array[k];
 		
 		for(int i=k*2+1;i<length;i=i*2+1){
