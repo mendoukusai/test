@@ -1,6 +1,7 @@
 package test;
 
 public class heapSortTest {
+	//堆排序，这里是大根堆
 	//任意节点i的父节点,i==0?null:(i-1)/2
 	//任意节点i的左右儿子,i*2+1,i*2+2
 	public static void main(String[] args) {
